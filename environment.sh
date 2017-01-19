@@ -7,7 +7,8 @@ fi
 ITMSFOLDERNAME=./itms
 ITMSSCREENSHOTSFOLDERRAWNAME="$ITMSFOLDERNAME/screenshots-raw"
 
-PATH="$PATH:/Applications/Xcode.app/Contents/Applications/Application Loader.app/Contents/itms/bin/"
+XCODE_DEV=`xcode-select --print-path`
+PATH="$PATH:${XCODE_DEV}/../Applications/Application Loader.app/Contents/itms/bin/"
 
 if [ -z "$ITMSUSER" ];
 then
